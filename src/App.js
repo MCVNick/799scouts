@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './reset.css';
+import './App.scss';
+
+const cubScoutsLogo = require('./resources/cubScoutsLogo.png')
+const boyScoutsLogo = require('./resources/boyScoutsLogo.png')
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='scout-header'>799 Scouting</h1>
+      <div className='container'>
+        <p className='req-220px'>You need at least 220px to view this website</p>
+        <div>
+          <img className='cub-scouts-logo' src={cubScoutsLogo} alt='cubScoutsLogo'/>
+        </div>
+        <div>
+          <img className='boy-scouts-logo' src={boyScoutsLogo} alt='boyScoutsLogo'/>
+        </div>
+      </div>
     </div>
   );
 }

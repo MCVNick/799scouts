@@ -1,0 +1,121 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100vh;
+  
+  .scout-header {
+    padding: 40px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    max-width: 950px;
+
+    .req-220px {
+      display: none;
+    }
+
+
+    div {
+      border-radius: 20px;
+      background-color: green;
+      margin: 10px;
+
+      .boy-scouts-logo, .cub-scouts-logo {
+        transition: all .2s ease-in-out;
+        padding: 25px;
+      }
+      .boy-scouts-logo:hover, .cub-scouts-logo:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+}
+
+@media (max-width: 219px) {
+  .App {
+    .container {
+      .req-220px {
+        display: initial;
+      }
+    }
+    .scout-header, .boy-scouts-logo, .cub-scouts-logo {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 220px) and (max-width: 425px){
+  .App {
+    .scout-header {
+      font-size: 10vw;
+    }
+    .container {
+      width: 100%;
+      div {
+        width: 100%;
+        .boy-scouts-logo, .cub-scouts-logo {
+          object-fit: cover;
+          width: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 380px) {
+  .App {
+    .scout-header {
+      font-size: 42px;
+    }
+    .container {
+      div {
+        .boy-scouts-logo, .cub-scouts-logo {
+          object-fit: cover;
+          width: 75%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 426px){
+  .App {
+    .scout-header {
+      font-size: 42px;
+    }
+    .container {
+      width: 100%;
+      flex-direction: row;
+      div {
+        width: 100%;
+        .boy-scouts-logo, .cub-scouts-logo {
+          object-fit: cover;
+          width: 100%;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .App {
+    justify-content: center;
+    
+    .scout-header {
+      font-size: 42px;
+      padding: 0 0 40px 0;
+    }
+  }
+}
