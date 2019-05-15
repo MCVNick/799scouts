@@ -6,9 +6,11 @@
   text-align: center;
   overflow: hidden;
   min-height: 100vh;
+  background-color: gray;
   
   .scout-header {
-    padding: 40px 0;
+    margin: 40px 0;
+    background-color: darkgray;
   }
 
   .container {
@@ -115,7 +117,7 @@
     
     .scout-header {
       font-size: 42px;
-      padding: 0 0 40px 0;
+      margin: 0 0 40px 0;
     }
   }
 }
