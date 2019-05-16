@@ -11,6 +11,9 @@
     margin: 40px 0;
     z-index: 2;
     color: #CE1126;
+    position: absolute;
+    top: 40px;
+    transition: all .2s ease-in-out;
   }
 
   .container {
@@ -21,6 +24,7 @@
     text-align: center;
     max-width: 950px;
     z-index: 2;
+    margin-top: 160px;
 
     .req-220px {
       display: none;
@@ -34,11 +38,17 @@
       .boy-scouts-logo, .cub-scouts-logo {
         transition: all .2s ease-in-out;
         padding: 25px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
       }
       .boy-scouts-logo:hover, .cub-scouts-logo:hover {
         transform: scale(1.04);
       }
     }
+  }
+
+  //I don't care too much about figuring out points for this
+  .fade-out {
+    opacity: 0 !important;
   }
 
   .background {
@@ -47,10 +57,10 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
-    min-height: 625px;
+    min-height: 650px;
 
     .top {
-      min-height: 625px;
+      min-height: 650px;
       overflow: hidden;
       position: absolute;
       height: 100vh;
@@ -72,7 +82,7 @@
       }
     }
     .divide {
-      min-height: 625px;
+      min-height: 650px;
       overflow: hidden;
       position: absolute;
       height: 100vh;
@@ -83,7 +93,7 @@
       transition: all 0.5s linear;
     }
     .bottom {
-      min-height: 625px;
+      min-height: 650px;
       overflow: hidden;
       position: absolute;
       height: 100vh;
