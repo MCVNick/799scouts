@@ -6,11 +6,11 @@
   text-align: center;
   overflow: hidden;
   min-height: 100vh;
-  background-color: gray;
   
   .scout-header {
     margin: 40px 0;
-    background-color: darkgray;
+    z-index: 2;
+    color: #CE1126;
   }
 
   .container {
@@ -20,6 +20,7 @@
     justify-items: center;
     text-align: center;
     max-width: 950px;
+    z-index: 2;
 
     .req-220px {
       display: none;
@@ -28,7 +29,6 @@
 
     div {
       border-radius: 20px;
-      background-color: green;
       margin: 10px;
 
       .boy-scouts-logo, .cub-scouts-logo {
@@ -38,6 +38,68 @@
       .boy-scouts-logo:hover, .cub-scouts-logo:hover {
         transform: scale(1.04);
       }
+    }
+  }
+
+  .background {
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+    .top {
+      overflow: hidden;
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      background: black;
+      clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+      transition: all 0.5s linear;
+
+      div {
+        position: absolute;
+      }
+    }
+    .divide {
+      overflow: hidden;
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      background: black;
+      clip-path: polygon(59.8% 0%, 60.2% 0%, 40.2% 100%, 39.8% 100%);
+      z-index: 1;
+      transition: all 0.5s linear;
+    }
+    .bottom {
+      overflow: hidden;
+      position: absolute;
+      height: 100vh;
+      width: 100vw;
+      background: black;
+      clip-path: polygon(40% 100%, 60% 0%, 100% 0%, 100% 100%);
+      clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
+      transition: all 0.5s linear;
+      
+      div {
+        position: absolute;
+      }
+    }
+    .background-fill {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+      z-index: 1;
+    }
+    .background-leave {
+      z-index: 0;
+    }
+    .delay-background-leave {
+      z-index: 1;
+    }
+    .divide-slide-left {
+      clip-path: polygon(-1% 0%, 0% 0%, 0% 100%, -1% 100%);
+    }
+    .divide-slide-right {
+      clip-path: polygon(100% 0%, 101% 0%, 101% 100%, 100% 100%);
     }
   }
 }
