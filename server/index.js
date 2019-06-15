@@ -20,7 +20,7 @@ app.use(`/build/client`, expressStaticGzip(`/build/client`, {
 }));
 app.use(json())
 
-const port = 4000
+const port = 4001
 app.listen(port, console.log('The server is running on port', port))
 
 app.get('*', (req, res) => {
